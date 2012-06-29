@@ -1,10 +1,9 @@
 {  
   "version": "0.1",  
   "name": "Simple Canvas Game",  
-  "description": "A simple HTML5 2D canvas game.",
-  "launch_path": "/WebGameStub/",
+  "description": "A simple HTML5 2D canvas game.",  
   "icons": {  
-    "128": "/WebGameStub/icon_128.png"  
+    "128": "/icon_128.png"  
   },  
   "developer": {  
     "name": "Matt Hackett",  

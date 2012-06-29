@@ -5,11 +5,10 @@
   "manifest_version": 2,
   "app": {
     "urls": [
-      "*://localhost/examples/simple_canvas_game/"
+      "*://example.com/yourgame"
     ],
     "launch": {
-      "container": "panel",
-      "web_url": "http://localhost:8086/examples/simple_canvas_game/"
+      "web_url": "http://example.com/yourgame"
     }
   },
   "icons": {
