@@ -8,20 +8,22 @@ It's about not having to write the most basic game infrastructure pieces, like c
 It's about having an easier starting point than a blank canvas.
 It's about not having to spend your time stitching together the usual cross-browser bits associated with bootstrapping an app on the web.
 
-### What WebGameStub 0.1 Gets You
+### What WebGameStub Gets You
 
 * A simple update/render loop and canvas.
 * A version of Lost Decade's simple canvas game that you can inspect and extend.
 * Links to helpful game docs, API docs, and open art resources so you don't have to hunt for them.
 * HTML & CSS based on HTML5 Boilerplate for speed, robustness, and futureproofing.
-* (Optional) Using node.js: automated optimization, deployment to github pages, and library installation using volo.
+* (Optional) Requires node.js: webserver for HTTP testing, play your game as a
+    native app, automated optimization, deployment to github pages, and library
+    installation using volo.
 
 ## Getting Started
 
 1. [Download](https://github.com/mozilla/WebGameStub/downloads) the current version of WebGameStub
-2. Review index.html and game.js in examples/simple_canvas_game. These are the main parts of the simple canvas game built on top of WebGameStub
+2. Review index.html and app.js in examples/simple_canvas_game. These are the main parts of the simple canvas game built on top of WebGameStub
     * Depending on your level of experience you may find Lost Decade's [excellent tutorial](http://www.lostdecadegames.com/how-to-make-a-simple-html5-canvas-game/) helpful when going through the code
-3. Use index.html and game.js in the www and www/js folders as a starting point for your own game
+3. Use index.html and app.js in the www and www/js folders as a starting point for your own game
     * Many of the additional files in WebGameStub come from HTML5 Boilerplate, which has [Docs](http://html5boilerplate.com/docs/#the-core-of-html5-boilerplate) you can read to learn more
 
 # Helpful Tools (requires node.js)
@@ -36,6 +38,18 @@ It's about not having to spend your time stitching together the usual cross-brow
     > sudo npm install -g volo
 
 Windows users will need to drop the sudo from this command
+
+## Easy Testing Over HTTP 
+
+Things sometimes work differently when browsed to via file: URLs.  Test over
+HTTP for more accurate results:
+
+    > volo serve
+    [1] 11563
+    > starting web server on port 8086
+    
+Now pointing your browser to http://localhost:8086/ will serve up your files
+for testing.
 
 ## Simple Library Installation
 
@@ -53,9 +67,9 @@ Right now there is a small (but growing) number of libraries useful to games tha
 
 ## Optimize for high performance
 
-Build a minified version complete with an appcache file:
+Build a minified version:
 
-    > volo appcache
+    > volo build
     (...)
 
 ## Deploy to github pages
@@ -71,6 +85,16 @@ Deploy the built version to the gh-pages branch of suitably named repo:
     To git@github.com:dmose/monkeyGame.git
     e5dbfd4..1296c81  gh-pages -> gh-pages
     GitHub Pages is set up. Check http://dmose.github.com/monkeyGame/ in about 10-15 minutes.
+
+## Make Your Game Playable as an App
+
+* Build and deploy to github pages, as above
+* Using Firefox 16 (currently available as the Nightly channel), browse to 
+    the install page (for example,
+    <http://dmose.github.com/WebGameStub/install.html>)
+* When prompted, click the "Install" button.
+* Look in your OS application list (on Mac OS X, for example, this is the global Applications folder)
+* Click on the app (from the above example, named Simple Canvas Game) to launch
 
 # More Resources
 
