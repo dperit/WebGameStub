@@ -8,6 +8,11 @@ It's about not having to write the most basic game infrastructure pieces, like c
 It's about having an easier starting point than a blank canvas.
 It's about not having to spend your time stitching together the usual cross-browser bits associated with bootstrapping an app on the web.
 
+WebGameStub is not a framework but rather a collection of files that help you
+get your project started quickly with some best practices. With the notable
+exception of require.js, pretty much anything in the www/ directory can be
+deleted if desired.
+
 ### What WebGameStub Gets You
 
 * A simple update/render loop and canvas.
@@ -20,17 +25,23 @@ It's about not having to spend your time stitching together the usual cross-brow
 
 ## Getting Started
 
-1. [Download](https://github.com/mozilla/WebGameStub/downloads) the current version of WebGameStub
+1. [Download](https://github.com/mozilla/WebGameStub/zipball/develop) the current version of WebGameStub
 2. Review index.html and app.js in examples/simple_canvas_game. These are the main parts of the simple canvas game built on top of WebGameStub
     * Depending on your level of experience you may find Lost Decade's [excellent tutorial](http://www.lostdecadegames.com/how-to-make-a-simple-html5-canvas-game/) helpful when going through the code
 3. Use index.html and app.js in the www and www/js folders as a starting point for your own game
     * Many of the additional files in WebGameStub come from HTML5 Boilerplate, which has [Docs](http://html5boilerplate.com/docs/#the-core-of-html5-boilerplate) you can read to learn more
+4. Once you've made some changes you can add all of your files to a new git repository.
+Navigate to your project folder in a terminal and do the following commands:
+
+        > git init
+        > git add -A
+        > git commit -m "Initial commit"
 
 # Helpful Tools (requires node.js)
 
 ## Tool Prerequisites
 
-* Be sure that [node.js and npm](http://nodejs.org/) are installed and in your PATH
+* Be sure that [node.js and npm](http://nodejs.org/) (>= 0.6) are installed and in your PATH
 * (optional) If you wish to deploy to github pages, ensure that
  [git](http://help.github.com/set-up-git-redirect) is installed and configured
 * Use npm to install volo into your path, if it's not there already:
